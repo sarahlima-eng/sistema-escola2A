@@ -169,11 +169,10 @@ def inverter_dicionario(dicionario):
     return novo
 
 # Função 17 - Mescla dois dicionários (o segundo sobrescreve o primeiro)
-# 🐛 BUG: ordem errada no update, o primeiro sobrescreve o segundo
 def mesclar_dicionarios(dict1, dict2):
     """Mescla dois dicionários. Valores do dict2 têm prioridade."""
-    resultado = dict2.copy()
-    resultado.update(dict1)   # BUG: deveria ser resultado.update(dict2) após dict1.copy()
+    resultado = dict1.copy()
+    resultado.update(dict2)   # BUG: deveria ser resultado.update(dict2) após dict1.copy()
     return resultado
 
 # Função 18 - Conta a frequência de cada item em uma lista
