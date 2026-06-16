@@ -264,14 +264,13 @@ def fibonacci(n, memo={}):
     return memo[n]
 
 # Função 25 - Valida um CPF (formato básico: 000.000.000-00)
-# 🐛 BUG: a contagem de dígitos está errada
 def validar_cpf_formato(cpf):
     """
     Valida se o CPF está no formato correto: 000.000.000-00
     Retorna True se válido, False se inválido.
     """
     cpf = cpf.strip()
-    if len(cpf) != 14:
+    if len(cpf) != 11:
         return False
     for i, char in enumerate(cpf):
         if i in [3, 7]:
