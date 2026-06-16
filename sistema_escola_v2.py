@@ -176,13 +176,12 @@ def mesclar_dicionarios(dict1, dict2):
     return resultado
 
 # Função 18 - Conta a frequência de cada item em uma lista
-# 🐛 BUG: incrementa antes de verificar se a chave existe
 def contar_frequencia(lista):
     """Retorna dicionário com a frequência de cada elemento."""
     frequencia = {}
     for item in lista:
         if item in frequencia:
-            frequencia[item] = 1   # BUG: deveria ser frequencia[item] += 1
+            frequencia[item] += 1   
         else:
             frequencia[item] = 1
     return frequencia
